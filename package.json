@@ -1,0 +1,24 @@
+{
+  "name": "@luislongo/xeokit-mod",
+  "version": "1.0.1",
+  "description": "Web Programming Toolkit for 3D/2D BIM and AEC Graphics",
+  "module": "/dist/xeokit-sdk.es.js",
+  "main": "/dist/xeokit-sdk.cjs.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "/dist",
+    "/types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luislongo/xeokit-mod"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/luislongo/xeokit-mod"
+  }
+}
