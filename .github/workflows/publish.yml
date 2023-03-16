@@ -21,4 +21,4 @@ jobs:
       - run: git push --tags && git push
       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: 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
