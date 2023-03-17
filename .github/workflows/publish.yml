@@ -1,24 +1,30 @@
-name: publish Node.js Package
+name: Create release based on version changed
 
 on:
   push:
     branches:
-      - master
+      - develop
+
+permissions: write-all
 
 jobs:
-  publish-gpr:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          node-version: 12
+          ref: develop
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
           registry-url: https://npm.pkg.github.com/
-          scope: "@luislongo"
-      - run: yarn install
-      - run: git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" && git config --global user.name "$GITHUB_ACTOR"
-      - run: yarn version --minor
-      - run: git push --tags && git push
-      - run: yarn publish
+      - name: Autorelease
+        uses: justincy/github-action-npm-release@2.0.2
+      - name: Install dependencies
+        run: |
+          npm publish
         env:
-          NODE_AUTH_TOKEN: "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"
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
