@@ -14,6 +14,11 @@
     "/dist",
     "/types"
   ],
+  "dependencies": {
+    "@loaders.gl/core": "^3.0.13",
+    "@loaders.gl/las": "^3.0.13",
+    "web-ifc": "0.0.30"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/luislongo/xeokit-mod"
