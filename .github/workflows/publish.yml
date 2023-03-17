@@ -3,7 +3,7 @@ name: Create release based on version changed
 on:
   push:
     branches:
-      - develop
+      - master
 
 permissions: write-all
 
