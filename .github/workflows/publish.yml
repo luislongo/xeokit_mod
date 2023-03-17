@@ -25,6 +25,7 @@ jobs:
         uses: justincy/github-action-npm-release@2.0.2
       - name: Install dependencies
         run: |
+          npm i
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
