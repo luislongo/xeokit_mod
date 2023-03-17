@@ -1,6 +1,6 @@
 {
   "name": "@luislongo/xeokit_mod",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Web Programming Toolkit for 3D/2D BIM and AEC Graphics",
   "module": "/dist/xeokit-sdk.es.js",
   "main": "/dist/xeokit-sdk.cjs.js",
